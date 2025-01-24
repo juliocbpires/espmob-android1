@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">LoginApp</string>
+    <string name="i_ve_forgotten_my_password">I\'ve forgotten my password?</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="or">or</string>
+    <string name="sign_in_with_t">Sign in with T</string>
+    <string name="sign_in_with_f">Sign in with F</string>
+</resources>
