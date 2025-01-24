@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logoDisney"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/disney_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconCast"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="16dp"
+        app:srcCompat="@drawable/baseline_cast_24"
+        android:contentDescription="Transmitir para"
+        app:layout_constraintTop_toTopOf="@id/logoDisney"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/movieBanner"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="16dp"
+        app:srcCompat="@drawable/banner"
+        android:contentDescription="Banner do Filme"
+        app:layout_constraintTop_toBottomOf="@id/logoDisney"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/channelsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/movieBanner"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/channelDisney"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/disney"
+            android:background="@drawable/channel_background"
+            android:contentDescription="Disney" />
+
+        <ImageView
+            android:id="@+id/channelPixar"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/pixar"
+            android:background="@drawable/channel_background"
+            android:contentDescription="Pixar" />
+
+        <ImageView
+            android:id="@+id/channelMarvel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/marvel"
+            android:background="@drawable/channel_background"
+            android:contentDescription="Marvel" />
+
+        <ImageView
+            android:id="@+id/channelStarWars"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/starwars"
+            android:background="@drawable/channel_background"
+            android:contentDescription="Star Wars" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/highlightsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Originals"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/channelsContainer" />
+
+    <LinearLayout
+        android:id="@+id/highlightsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/highlightsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/highlight1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster1"
+            android:contentDescription="Destaque 1" />
+
+        <ImageView
+            android:id="@+id/highlight2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster2"
+            android:contentDescription="Destaque 2" />
+
+        <ImageView
+            android:id="@+id/highlight3"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster3"
+            android:contentDescription="Destaque 3" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/originalsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Originals"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/highlightsContainer" />
+
+    <LinearLayout
+        android:id="@+id/originalsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/originalsText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/original1"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster4"
+            android:contentDescription="Original 1" />
+
+        <ImageView
+            android:id="@+id/original2"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster5"
+            android:contentDescription="Original 2" />
+
+        <ImageView
+            android:id="@+id/original3"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="8dp"
+            app:srcCompat="@drawable/poster6"
+            android:contentDescription="Original 3" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNavBar"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/navHome"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="32dp"
+            app:srcCompat="@drawable/baseline_home_24"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/navSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="32dp"
+            app:srcCompat="@drawable/outline_search_24"
+            android:contentDescription="Pesquisar" />
+
+        <ImageView
+            android:id="@+id/navDownloads"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="32dp"
+            app:srcCompat="@drawable/baseline_arrow_downward_24"
+            android:contentDescription="Downloads" />
+
+        <ImageView
+            android:id="@+id/navProfile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_margin="32dp"
+            app:srcCompat="@drawable/profile1"
+            android:contentDescription="Perfil" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
