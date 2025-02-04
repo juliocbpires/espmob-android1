@@ -1,6 +1,8 @@
 package com.example.productapp
 
 import android.os.Bundle
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -30,8 +32,26 @@ class MainActivity : AppCompatActivity() {
     private fun initRecyclerView(){
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
         binding.recyclerView.setHasFixedSize(true)
-        binding.recyclerView.adapter = ProductsAdapter(getList())
-    }
 
-    private fun getList() = listOf("Apple iPhone 16", "Google Pixel 9", "OnePlus 13", "Samsung Galaxy S25", "Xiaomi 15")
+        val adapter = ProductsAdapter(fillData())
+        binding.recyclerView.adapter = adapter
+    }
+}
+
+@Parcelize
+data class Products(
+    val name: String,
+    val drawable: Int,
+    val price: Double,
+    val size: Int,
+    val seller: String) : Parcelable
+
+fun fillData(): List<Products> {
+    return listOf(
+        Products("Apple iPhone 16", R.drawable.apple, 5499.00, 128, "Fast Shop" ),
+        Products("Google Pixel 9", R.drawable.google, 3700.99, 128, "techINN" ),
+        Products("OnePlus 13", R.drawable.oneplus, 4178.45, 256, "AliExpress" ),
+        Products("Samsung Galaxy S25", R.drawable.samsung,6299.10, 256, "Shop Samsung" ),
+        Products("Xiaomi 15", R.drawable.xiaomi, 4591.77, 512, "AliExpress" )
+    )
 }
