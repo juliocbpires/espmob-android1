@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.ListView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -26,5 +27,9 @@ class MainActivity : AppCompatActivity() {
         adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, products)
         mListView.adapter = adapter
 
+        mListView.setOnItemClickListener { parent, view, position, id ->
+            val element = parent.getItemAtPosition(position) as String
+            Toast.makeText(this,"Toque Realizado - $element",Toast.LENGTH_SHORT).show()
+        }
     }
 }
